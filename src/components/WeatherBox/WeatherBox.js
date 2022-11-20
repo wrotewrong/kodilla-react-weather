@@ -26,10 +26,13 @@ const WeatherBox = () => {
           };
 
           setFinalData(weatherData);
+          setPending(false);
         });
-      } else setError(true);
+      } else {
+        setPending(false);
+        setError(true);
+      }
     });
-    setPending(false);
   }, []);
 
   return (
