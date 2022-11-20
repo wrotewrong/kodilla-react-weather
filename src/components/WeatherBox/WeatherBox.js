@@ -10,7 +10,6 @@ const WeatherBox = () => {
   let [error, setError] = useState(false);
 
   const handleCityChange = useCallback((city) => {
-    setFinalData('');
     setPending(true);
     setError(false);
     fetch(
